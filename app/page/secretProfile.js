@@ -32,7 +32,7 @@ exports.create = function (api) {
   function menuItem () {
     return h('a', {
       'ev-click': () => api.app.sync.goTo(api.keys.sync.id())
-    }, '/profile')
+    }, '/secretProfile')
   }
 
   function secretProfilePage (location) {
