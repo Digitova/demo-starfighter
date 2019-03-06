@@ -1,0 +1,58 @@
+Thread {
+  /* background: rgb(244, 234, 255) */
+
+  section.top {
+    /* border-bottom: solid 1px gainsboro */
+
+    // for private threads
+    section.recipients {
+      display: flex
+      justify-content: center
+      align-items: center
+
+      margin-top: .6rem
+      margin-bottom: 0.2rem
+
+      div {
+        margin: 0 .2rem
+
+        a img {
+          width: 2.5rem
+          height: 2.5rem
+        }
+      }
+
+      div.warning a img {
+        width: 3.5rem
+        height: 3.5rem
+        border: 3px red solid
+      }
+    }
+
+    section.info {
+      text-align: center
+
+      margin: .4rem
+
+      font-size: .9rem
+      $textSubtle
+
+      -warning {
+        font-size: 1rem
+        color: #000
+      }
+    }
+  }
+
+  section.content {}
+
+  section.bottom {
+    // copied from Message.-default
+    padding: 1rem 0
+    display: grid
+    grid-template-columns: 6rem 1fr minmax(6rem, auto)
+    grid-gap: 1.5rem
+
+    div.Compose { grid-column: 2 }
+  }
+}

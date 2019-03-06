@@ -1,0 +1,127 @@
+Compose {
+  display: flex
+  flex-direction: column
+
+  textarea {
+    border: 1px solid gainsboro
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+  }
+
+  input.channel {
+    border: 1px solid gainsboro
+    border-bottom: none
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+    padding: .5rem
+
+    :focus {
+      outline: none
+      box-shadow: none
+    }
+    :disabled {
+      background-color: #f1f1f1
+      cursor: not-allowed
+    }
+  }
+
+  section.warnings {
+    color: #fff
+
+    div.warning {
+      background-color: red
+      padding: .5rem
+      margin-bottom: 5px
+
+      display: flex
+      justify-content: start
+      align-items: center
+
+      i.fa-exclamation-triangle { margin-right: .5rem }
+
+      div.message {
+        flex-grow: 1
+        font-weight: 600
+        margin-right: .3rem
+      }
+
+      i.fa-times { cursor: pointer }
+    }
+  }
+
+  section.actions {
+    display: flex
+    flex-direction: row
+    align-items: baseline
+    justify-content: space-between
+
+    margin-top: .4rem
+
+    input[type="file"] {
+      width: 1.8rem
+      height: 1.8rem
+      cursor: pointer
+      color: transparent
+      font-family: FontAwesome
+      border: 1px rgba(0,0,0,0) solid
+
+      ::-webkit-file-upload-button {
+        visibility: hidden
+      }
+
+      ::before {
+        padding-top: .3rem
+
+        content: '\f0c6'
+        font-size: 1rem
+        color: #666;
+        background-color: #fff
+
+        outline: none
+        white-space: nowrap
+        -webkit-user-select: none
+
+        display: flex
+        justify-content: center
+      }
+
+      :hover, :focus {
+        border: 1px gainsboro solid
+        outline: none
+        box-shadow: none
+      }
+    }
+
+  }
+
+  -expanded {
+    textarea {
+      height: 200px
+      transition: height .15s ease-out
+    }
+
+    input.channel {
+      display: flex
+    }
+
+    section.actions {
+      display: flex
+    }
+  }
+
+  -contracted {
+    textarea {
+      height: 50px
+      transition: height .15s ease-in
+    }
+
+    input.channel {
+      display: none
+    }
+
+    section.actions {
+      display: none
+    }
+  }
+
+}

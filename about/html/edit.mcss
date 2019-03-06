@@ -1,0 +1,213 @@
+AboutEditor {
+  position: relative
+
+  margin-bottom: 2rem
+
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  div.lightbox {
+    div.lightbox__content {
+      div.cropper {
+        div.PatchProfileCrop {}
+        div.background {
+          position: fixed
+          z-index: 98
+          top: 0
+          left: 0
+
+          width: 100%
+          height: 100%
+          background-color: rgba(0, 0, 0, 0.5)
+        }
+      }
+    }
+  }
+
+  section.avatar {
+    margin-right: 1rem
+
+    section img {
+      width: 500px
+      height: 500px
+    }
+
+    footer {
+      font-size: 1.8rem
+      margin: .4rem 0
+    }
+  }
+
+  section.description {
+    flex-basis: 40%
+    flex-grow: 1
+
+    margin-top: 1rem
+  }
+
+  section.aliases {
+    flex-basis: 100%
+
+    margin-top: 1rem
+
+    header {
+      margin-bottom: .8rem
+      border-bottom: 1px gainsboro solid
+    }
+
+    section {
+      display: flex
+      flex-wrap: wrap
+      align-content: flex-start
+
+      margin-bottom: 1rem
+
+      header {
+        flex-basis: 100%
+
+        font-size: .9rem
+        $textSubtle
+
+        margin-bottom: .2rem
+      }
+
+      input {
+      }
+    }
+
+    section.avatars {
+      img {
+        $avatarLarge
+        margin: 0 .15rem 0.2rem 0
+
+        cursor: pointer
+      }
+
+      div.file-upload {
+        position: relative
+
+        input[type="file"] {
+          $avatarLarge
+          color: transparent
+          border: none
+
+          ::-webkit-file-upload-button {
+            visibility: hidden
+          }
+
+          ::before {
+            position: absolute
+
+            background: #fff
+            color: #666
+            border: 1px solid #bbb
+            border-radius: .2rem
+            padding: .5rem
+            cursor: pointer
+
+            margin: 0
+            padding: 10% 20%
+            top: 12%
+            left: 18%
+
+            content: '+'
+            font-size: 1.4rem
+
+            outline: none
+            white-space: nowrap
+            -webkit-user-select: none
+          }
+
+          :active, :focus {
+            outline: none
+            box-shadow: none
+          }
+        }
+      }
+    }
+
+    section.names {
+      header {
+      }
+
+      section {
+        display: flex
+        flex-wrap: wrap
+
+        div {
+          display: flex
+          cursor: pointer
+
+          border: 1px gainsboro solid
+          margin: 0 .4rem .5rem 0
+
+          div { padding: .3rem }
+
+          div.name {
+            border-right: 1px gainsboro solid
+          }
+
+          div.count {
+            font-size: .9rem
+            background-color: #eeeeee
+          }
+        }
+
+        input {
+          border: 1px gainsboro solid
+          font-size: 1rem
+          height: 1.7rem
+        }
+      }
+
+    }
+
+    section.action {
+      button.cancel {
+        margin-left: 0
+      }
+
+      button.confirm {
+        $backgroundPrimary
+      }
+    }
+  }
+}
+
+PatchProfileCrop {
+  background: #f5f5f5
+
+  z-index: 99
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+
+
+  overflow: auto
+  max-width: 100%
+  padding: 1rem
+  border: 1px solid #eee
+  border-radius: .2em
+
+  display: flex
+  flex-direction: column
+
+  header {
+    font-weight: 600
+    margin-bottom: .5rem
+  }
+
+  canvas { 
+    margin: 0 auto 1rem auto
+    max-height: 80vh
+    max-width: 100%
+  }
+
+  section.actions {
+    display: flex
+    justify-content: space-between
+  }
+}
+

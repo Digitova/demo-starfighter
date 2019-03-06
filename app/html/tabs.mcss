@@ -1,0 +1,108 @@
+/* TODO depricate this carefully (see styles/mcss/hypertabs.mcss) */
+/* NOTE there are some active styles in here still */
+
+Hypertabs {
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+
+  display: flex
+  flex-direction: column
+
+  height: 100% /* needed to stop scroller blowing out */
+  overflow: hidden
+
+  nav {
+    display: flex
+    
+    background: linear-gradient(to bottom, #efefef, #e5e5e5)
+
+    section.tabs {
+      flex-grow: 1
+      display: flex
+      min-width: 0
+
+      div.tab {
+        flex-grow: 1
+
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        min-width: 3.5rem
+        font-size: .9rem
+        background-color: #efefef
+        overflow: hidden
+
+        padding: 0
+        margin-left: .6rem
+        border: 1px gainsboro solid
+        border-bottom: none
+
+        -selected {
+          color: #222
+          $backgroundPrimary
+
+          a.link {
+            max-width: calc(100% - 2rem)
+          }
+        }
+
+        -notify {
+          background-color: orange;
+        }
+
+
+        a {
+          color: #666
+
+          :hover {
+            color: #0088cc
+            text-decoration: none
+          }
+        }
+
+        a.link {
+          flex-grow: 1
+          flex-shrink: 0
+          overflow-x: hidden
+          min-width: 0
+          max-width: calc(100% - 1.4rem)
+          white-space: nowrap
+          text-overflow: ellipsis
+
+          padding: .5rem 0 .5rem .6rem
+        }
+
+      }
+
+    }
+
+    div.navExtra {
+      z-index: 1000
+      padding-bottom: calc(var(--app-border-width)/2)
+
+      display: grid
+      grid-auto-flow: column
+      grid-gap: .5rem
+      align-items: center
+
+      margin: 0 .5rem
+    }
+  }
+
+  section.content {
+    display: flex
+
+    height: 100% /* needed to stop making nav weird */
+
+    div.page {
+      flex-grow: 1
+
+      display: flex /*hack to get give Scroller context it needs */
+    }
+  }
+}
+

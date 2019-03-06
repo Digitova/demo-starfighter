@@ -1,0 +1,102 @@
+Relationships {
+  margin-bottom: 2rem
+
+  header {
+    margin-bottom: .8rem
+    border-bottom: 1px gainsboro solid
+  }
+
+  div.relationship-status {
+    margin: 0 
+    margin-bottom: 1rem
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+    section {
+      button { margin: 0 }
+
+      -friendship {
+        display: flex
+        div.relationship-status {
+          margin: auto
+          margin-left: .5rem
+        }
+
+      }
+      -blocking {
+        margin-left: 8rem
+        position: relative
+
+        button {
+          i.fa { margin-right: .5rem }
+        }
+
+        div.explainer {
+          visibility: hidden
+          position: absolute
+          background: #fff
+          width: 24rem
+          left: -20rem
+          bottom: 2rem
+          padding: .5rem
+          box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 8px
+
+          ul {
+            font-size: .8rem
+            padding-left: 1rem
+          }
+        }
+
+        :hover {
+          div.explainer {
+            visibility: visible
+          }
+        }
+      }
+    }
+  }
+
+  div.groups {
+    div.tabs {
+      display: grid
+      grid-auto-flow: column
+      justify-content: start
+      grid-gap: 2rem
+
+      div.tab {
+        color: #777
+        cursor: pointer
+        padding-bottom: .5rem
+        border-bottom: 2px solid #fff
+
+        margin: 1rem 0 .5rem
+
+        -active { border-bottom: 2px solid #666 }
+        :hover { color: #9754de }
+
+        display: grid
+        grid-auto-flow: column
+        grid-gap: .5rem
+
+        div.label {
+          text-transform: uppercase 
+          letter-spacing: 1px
+          font-size: .8rem
+          font-weight: 600
+        }
+        div.count {
+          font-size: .8rem
+          color: #999
+        }
+      }
+    }
+
+    div.group {
+      display: grid
+      grid-template-columns: repeat(auto-fit, 4rem)
+    }
+  }
+}

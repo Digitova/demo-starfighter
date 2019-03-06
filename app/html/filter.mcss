@@ -1,0 +1,123 @@
+Filter {
+  color: #444
+  $threadWidth
+
+  i {
+    position: absolute
+    top: 3rem
+
+    font-size: 1.2rem
+    color: #b3b3b3
+    cursor: pointer
+  }
+  i.fa-filter {
+    right: 2rem
+
+    -active {
+      color: #555
+    }
+  }
+  i.fa-angle-up {
+    left: 1rem
+  }
+  i.custom {
+    right: 3.5rem
+    font-size: .8rem
+    color: #666
+
+    ::before {
+      content: 'custom'
+    }
+  }
+
+  div.options {
+    background: rgba(0,0,0,.02)
+
+    padding: .5rem
+    border: 1px gainsboro solid
+
+    -hidden {
+      height: 0
+      display: none
+    }
+
+    header {
+      margin-bottom: .4rem
+
+      font-weight: 600
+      i {
+        margin-left: .4rem
+      }
+    }
+
+    section {
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: center
+
+      div.users {
+        flex-basis: 100%
+        margin-bottom: .5rem
+
+        display: flex
+        align-items: center
+
+        div.FilterToggle {
+          flex-grow: 1
+        }
+        div.user-filter {
+          label {
+            margin-right: .4rem
+          }
+          input {
+            border: 1px gainsboro solid
+            font-size: 1rem
+          }
+        }
+      }
+      
+      div.channels  {
+        display: flex
+         
+        label {
+          margin-right: .4rem
+        }
+        input {
+          border: 1px gainsboro solid
+          font-size: 1rem
+        }
+      }
+
+      div.message-types {
+        flex-basis: 100%
+
+        margin: .6rem 0
+        display: flex
+
+        header {
+          margin-right: 1rem
+        }
+      }
+
+      div.root-messages {
+      }
+    }
+
+  }
+}
+
+FilterToggle {
+  cursor: pointer
+  margin-right: .8rem
+
+  display: flex
+  align-items: center
+
+  label {
+    margin-right: .4rem
+  }
+
+  i {
+  }
+}
