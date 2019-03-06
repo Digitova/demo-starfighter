@@ -46,7 +46,18 @@ exports.create = function (api) {
     return h('SectionEditor', [
       modal,
       h('section', [
-        h('header', 'Skills')
+        h('header', 'Skills'),
+        h('section.skills', [
+          h('ul', [
+            h('li', 'Web. HTML5, CSS, Django, Node.js. Laravel, React.'),
+            h('li', 'Programming Skills. C#, Java, C++, JavaScript, Python, PHP, Objective-C, AJAX, ASP.NET, Ruby, Golang.'),
+            h('li', 'Blockchain technologies, Bitcoin, Ripple, Ethereum, Bitcoin Cash, Monero, Litecoin.'),
+            h('li', 'Cloud and Distributed Computing. Kubernetes, Docker, Azure, AWS.'),
+            h('li', 'Machine Learning. TensorFlow, scikit-learn, Google Cloud ML Engine, AML.'),
+            h('li', 'Operating Systems. Microsoft Windows, macOS, Linux.'),
+            h('li', 'Network and Information Security. OSCP, CISSP, Cisco CCNA, Certified Ethical Hacker (CEH), CompTIA Security+.')
+          ])
+        ])
       ])
     ])
   }
