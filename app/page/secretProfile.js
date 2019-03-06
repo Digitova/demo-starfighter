@@ -7,11 +7,11 @@ const Mutual = require('ssb-mutual')
 
 exports.gives = nest({
   'app.html.menuItem': true,
-  'app.page.privateProfile': true
+  'app.page.secretProfile': true
 })
 
 exports.needs = nest({
-  'about.html.editPrivate': 'first',
+  'about.html.edit': 'first',
   'about.obs.name': 'first',
   'app.html.scroller': 'first',
   'app.sync.goTo': 'first',
@@ -26,7 +26,7 @@ exports.needs = nest({
 exports.create = function (api) {
   return nest({
     'app.html.menuItem': menuItem,
-    'app.page.privateProfile': privateProfilePage
+    'app.page.secretProfile': secretProfilePage
   })
 
   function menuItem () {
@@ -35,7 +35,7 @@ exports.create = function (api) {
     }, '/profile')
   }
 
-  function privateProfilePage (location) {
+  function secretProfilePage (location) {
     const { feed: id } = location
 
     var balances = Dict()
@@ -51,7 +51,7 @@ exports.create = function (api) {
     })
 
     const profile = h('Profile', [
-      h('section.editPrivate', api.about.html.editPrivate(id)),
+      h('section.edit', api.about.html.edit(id)),
       h('section.relationships', api.contact.html.relationships(id)),
       h('section.credit', map(dictToCollection(balances), balance => {
         return h('div', ['💰 ', balance.value, ' ', balance.key])

@@ -11,7 +11,7 @@ exports.gives = nest({
 })
 
 exports.needs = nest({
-  'about.html.edit': 'first',
+  'about.html.editPrivate': 'first',
   'about.obs.name': 'first',
   'app.html.scroller': 'first',
   'app.sync.goTo': 'first',
@@ -51,7 +51,7 @@ exports.create = function (api) {
     })
 
     const profile = h('Profile', [
-      h('section.edit', api.about.html.edit(id)),
+      h('section.editPrivate', api.about.html.editPrivate(id)),
       h('section.relationships', api.contact.html.relationships(id)),
       h('section.credit', map(dictToCollection(balances), balance => {
         return h('div', ['💰 ', balance.value, ' ', balance.key])
