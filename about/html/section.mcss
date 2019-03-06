@@ -17,6 +17,26 @@ SectionEditor {
         border-bottom: 1px gainsboro solid
       }
 
+        section.skills {
+            ul {
+                li {
+                    div {
+                        display: flex
+                        flex-direction: row
+                        justify-content: flex-start
+                        margin-top: -19px
+
+                        text.redacted {
+                            color: transparent
+                            background-color: #565656
+                            width: 125px
+                            margin: 0 2px
+                        }
+                    }
+                 }
+            }
+        }
+
       div.redacted1 {
             background-color: #565656
             padding: 10px

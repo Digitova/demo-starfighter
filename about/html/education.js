@@ -49,12 +49,12 @@ exports.create = function (api) {
         h('header', 'Education'),
         h('div.redacted1'),
         h('div.educationDetails', [
-          h('text', 'Bachelors'),
+          h('text', 'Bachelor of Science'),
           h('text.redacted1')
         ]),
         h('div.redacted2'),
         h('div.educationDetails', [
-          h('text', 'Masters'),
+          h('text', 'Master of Arts'),
           h('text.redacted2')
         ]),
         h('div.redacted3'),

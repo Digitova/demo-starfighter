@@ -55,7 +55,15 @@ exports.create = function (api) {
             h('li', 'Cloud and Distributed Computing. Kubernetes, Docker, Azure, AWS.'),
             h('li', 'Machine Learning. TensorFlow, scikit-learn, Google Cloud ML Engine, AML.'),
             h('li', 'Operating Systems. Microsoft Windows, macOS, Linux.'),
-            h('li', 'Network and Information Security. OSCP, CISSP, Cisco CCNA, Certified Ethical Hacker (CEH), CompTIA Security+.')
+            h('li', [
+              h('div', [
+                h('text', 'Network and Information Security. OSCP, CISSP, Cisco CCNA,'),
+                h('text.redacted'),
+                h('text', 'CompTIA Security+, '),
+                h('text.redacted'),
+                h('text', '.')
+              ])
+            ])
           ])
         ])
       ])
