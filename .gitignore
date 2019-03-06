@@ -3,3 +3,4 @@ npm-debug.log
 *.sqlite3
 .idea*
 .idea/*
+/.DS_Store

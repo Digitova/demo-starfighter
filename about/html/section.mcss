@@ -1,0 +1,21 @@
+SectionEditor {
+  position: relative
+
+  margin-bottom: 2rem
+
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  section {
+      flex-basis: 100%
+
+      margin-top: 1rem
+
+      header {
+        margin-bottom: .8rem
+        border-bottom: 1px gainsboro solid
+      }
+  }
+}
+
