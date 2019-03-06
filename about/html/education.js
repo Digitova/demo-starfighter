@@ -48,11 +48,20 @@ exports.create = function (api) {
       h('section.education', [
         h('header', 'Education'),
         h('div.redacted1'),
-        h('text', 'Bachelors'),
+        h('div.educationDetails', [
+          h('text', 'Bachelors'),
+          h('text.redacted1')
+        ]),
         h('div.redacted2'),
-        h('text', 'Masters'),
+        h('div.educationDetails', [
+          h('text', 'Masters'),
+          h('text.redacted2')
+        ]),
         h('div.redacted3'),
-        h('text', 'PhD')
+        h('div.educationDetails', [
+          h('text', 'PhD'),
+          h('text.redacted3')
+        ]),
       ])
     ])
   }
