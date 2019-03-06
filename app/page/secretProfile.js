@@ -87,7 +87,7 @@ exports.create = function (api) {
       Scroller(container, content, render, false, false)
     )
 
-    watch(api.about.obs.name(id), name => { container.title = '@' + name })
+    watch(api.about.obs.name(id), name => { container.title = '/secretProfile' })
     return container
   }
 
