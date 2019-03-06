@@ -75,6 +75,36 @@ AboutEditor {
       input {
       }
     }
+    
+    section.education {
+        flex-basis: 100%
+
+        margin-top: 1rem
+
+        header {
+          margin-bottom: .8rem
+          border-bottom: 1px gainsboro solid
+        }
+
+        section {
+          display: flex
+          flex-wrap: wrap
+          align-content: flex-start
+
+          margin-bottom: 1rem
+
+          header {
+            flex-basis: 100%
+
+            font-size: .9rem
+            $textSubtle
+
+            margin-bottom: .2rem
+          }
+
+          input {
+          }
+        }
 
     section.avatars {
       img {

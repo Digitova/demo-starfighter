@@ -43,7 +43,7 @@ exports.create = function (api) {
     const isOpen = Value(false)
     const modal = api.app.html.modal(modalContent, { isOpen })
 
-    return h('AboutEditor', [
+    return h('SectionEditor', [
       modal,
       h('section.education', [
         h('header', 'Education')
