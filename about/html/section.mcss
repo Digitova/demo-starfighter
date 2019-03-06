@@ -16,6 +16,27 @@ SectionEditor {
         margin-bottom: .8rem
         border-bottom: 1px gainsboro solid
       }
+
+      div.redacted1 {
+            background-color: #565656
+            padding: 10px
+            width: 150px
+            margin: 10px 0 5px 0
+      }
+
+      div.redacted2 {
+            background-color: #565656
+            padding: 10px
+            width: 180px
+            margin: 10px 0 5px 0
+      }
+
+      div.redacted3 {
+          background-color: #565656
+          padding: 10px
+          width: 120px
+          margin: 10px 0 5px 0
+      }
   }
 }
 

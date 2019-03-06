@@ -46,7 +46,13 @@ exports.create = function (api) {
     return h('SectionEditor', [
       modal,
       h('section.education', [
-        h('header', 'Education')
+        h('header', 'Education'),
+        h('div.redacted1'),
+        h('text', 'Bachelors'),
+        h('div.redacted2'),
+        h('text', 'Masters'),
+        h('div.redacted3'),
+        h('text', 'PhD')
       ])
     ])
   }
