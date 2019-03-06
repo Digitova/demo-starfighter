@@ -12,6 +12,7 @@ exports.gives = nest({
 
 exports.needs = nest({
   'about.html.editPrivate': 'first',
+  'about.html.education': 'first',
   'about.obs.name': 'first',
   'app.html.scroller': 'first',
   'app.sync.goTo': 'first',
@@ -52,6 +53,9 @@ exports.create = function (api) {
 
     const profile = h('Profile', [
       h('section.editPrivate', api.about.html.editPrivate(id)),
+      h('section.education', api.about.html.education(id)),
+      // h('section.skills', api.contact.html.relationships(id)),
+      // h('section.experience', api.contact.html.relationships(id)),
       h('section.relationships', api.contact.html.relationships(id))
     ])
 
