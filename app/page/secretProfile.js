@@ -53,7 +53,6 @@ exports.create = function (api) {
 
     const profile = h('Profile', [
       h('section.edit', api.about.html.edit(id)),
-      h('section.skillsSecret', api.about.html.skillsSecret(id)),
       h('section.relationships', api.contact.html.relationships(id)),
       h('section.credit', map(dictToCollection(balances), balance => {
         return h('div', ['💰 ', balance.value, ' ', balance.key])

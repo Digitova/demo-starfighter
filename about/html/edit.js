@@ -24,6 +24,7 @@ exports.needs = nest({
   'message.html.confirm': 'first',
   'message.html.markdown': 'first',
   'about.html.educationSecret': 'first',
+  'about.html.skillsSecret': 'first',
   sbot: {
     'async.addBlob': 'first',
     'pull.links': 'first'
@@ -104,6 +105,7 @@ exports.create = function (api) {
         return api.message.html.markdown(descr)
       })),
       h('section.educationSecret', api.about.html.educationSecret(id)),
+      h('section.skillsSecret', api.about.html.skillsSecret(id)),
       h('section.aliases', [
         h('header', 'Aliases'),
         h('section.avatars', [
