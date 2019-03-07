@@ -47,20 +47,26 @@ exports.create = function (api) {
       modal,
       h('section.education', [
         h('header', 'Education'),
-        h('div.redacted1'),
+        h('div.university', [
+          h('text.redacted', 'University of North Carolina at Chapel Hill')
+        ]),
         h('div.educationDetails', [
           h('text', 'Bachelor of Science'),
-          h('text.redacted1')
+          h('text.redacted', 'Computer Science')
         ]),
-        h('div.redacted2'),
+        h('div.university', [
+          h('text.redacted', 'Northwestern University')
+        ]),
         h('div.educationDetails', [
-          h('text', 'Master of Arts'),
-          h('text.redacted2')
+          h('text', 'Master of Science'),
+          h('text.redacted', 'Digital Forensics & Cyber Security')
         ]),
-        h('div.redacted3'),
+        h('div.university', [
+          h('text.redacted', 'Northwestern University')
+        ]),
         h('div.educationDetails', [
           h('text', 'PhD'),
-          h('text.redacted3')
+          h('text.redacted', 'Ethical Hacking')
         ]),
       ])
     ])
