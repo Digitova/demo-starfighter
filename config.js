@@ -35,8 +35,8 @@ function addSockets (config) {
     {
       connections: {
         incoming: { unix: [{ scope: 'local', transform: 'noauth', server: true }] }
-      } // ,
-      // remote: `unix:${Path.join(config.path, 'socket')}:~noauth:${pubkey}` // overwrites
+      },
+      remote: `net:127.0.0.1:${config.port}~shs:${pubkey}`
     }
   )
 }
