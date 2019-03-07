@@ -58,9 +58,9 @@ exports.create = function (api) {
             h('li', [
               h('div', [
                 h('text', 'Network and Information Security. OSCP, CISSP, Cisco CCNA,'),
-                h('text.redacted'),
+                h('text.redacted', 'Certified Ethical Hacker (CEH)'),
                 h('text', 'CompTIA Security+, '),
-                h('text.redacted'),
+                h('text.redacted', 'Network Penetration, Reverse Engineering'),
                 h('text', '.')
               ])
             ])

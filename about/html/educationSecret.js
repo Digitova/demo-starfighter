@@ -7,7 +7,7 @@ const {
 } = require('mutant')
 const pull = require('pull-stream')
 
-exports.gives = nest('about.html.education')
+exports.gives = nest('about.html.educationSecret')
 
 exports.needs = nest({
   'about.obs': {
@@ -30,7 +30,7 @@ exports.needs = nest({
 
 exports.create = function (api) {
   return nest({
-    'about.html.education': education
+    'about.html.educationSecret': education
   })
 
   // TODO refactor this to use obs better
@@ -48,25 +48,25 @@ exports.create = function (api) {
       h('section.education', [
         h('header', 'Education'),
         h('div.university', [
-          h('text.redacted', 'University of North Carolina at Chapel Hill')
+          h('text.bold', 'University of North Carolina at Chapel Hill')
         ]),
         h('div.educationDetails', [
-          h('text', 'Bachelor of Science'),
-          h('text.redacted', 'Computer Science')
+          h('text', 'Bachelor of Science,'),
+          h('text.visible', 'Computer Science')
         ]),
         h('div.university', [
-          h('text.redacted', 'Northwestern University')
+          h('text.bold', 'Northwestern University')
         ]),
         h('div.educationDetails', [
-          h('text', 'Master of Science'),
-          h('text.redacted', 'Digital Forensics & Cyber Security')
+          h('text', 'Master of Science,'),
+          h('text.visible', 'Digital Forensics & Cyber Security')
         ]),
         h('div.university', [
-          h('text.redacted', 'Northwestern University')
+          h('text.bold', 'Northwestern University')
         ]),
         h('div.educationDetails', [
-          h('text', 'PhD'),
-          h('text.redacted', 'Ethical Hacking')
+          h('text', 'PhD,'),
+          h('text.visible', 'Ethical Hacking')
         ]),
       ])
     ])
