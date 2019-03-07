@@ -48,25 +48,25 @@ exports.create = function (api) {
       h('section.education', [
         h('header', 'Education'),
         h('div.university', [
-          h('text', 'University of North Carolina at Chapel Hill')
+          h('text.bold', 'University of North Carolina at Chapel Hill')
         ]),
         h('div.educationDetails', [
-          h('text', 'Bachelor of Science'),
-          h('text', 'Computer Science')
+          h('text', 'Bachelor of Science,'),
+          h('text.visible', 'Computer Science')
         ]),
         h('div.university', [
-          h('text', 'Northwestern University')
+          h('text.bold', 'Northwestern University')
         ]),
         h('div.educationDetails', [
-          h('text', 'Master of Science'),
-          h('text', 'Digital Forensics & Cyber Security')
+          h('text', 'Master of Science,'),
+          h('text.visible', 'Digital Forensics & Cyber Security')
         ]),
         h('div.university', [
-          h('text', 'Northwestern University')
+          h('text.bold', 'Northwestern University')
         ]),
         h('div.educationDetails', [
-          h('text', 'PhD'),
-          h('text', 'Ethical Hacking')
+          h('text', 'PhD,'),
+          h('text.visible', 'Ethical Hacking')
         ]),
       ])
     ])

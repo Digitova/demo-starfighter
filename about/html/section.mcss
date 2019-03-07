@@ -37,9 +37,15 @@ SectionEditor {
         }
 
         div.university {
+            margin-top: 10px
+
             text.redacted {
                 background-color: #565656
                 color: transparent
+            }
+
+            text.bold {
+                font-weight: 700
             }
         }
 
@@ -51,6 +57,10 @@ SectionEditor {
           text.redacted {
                 background-color: #565656
                 color: transparent
+                margin-left: 4px
+          }
+
+          text.visible {
                 margin-left: 4px
           }
       }
