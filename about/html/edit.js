@@ -23,6 +23,7 @@ exports.needs = nest({
   'keys.sync.id': 'first',
   'message.html.confirm': 'first',
   'message.html.markdown': 'first',
+  'about.html.educationSecret': 'first',
   sbot: {
     'async.addBlob': 'first',
     'pull.links': 'first'
@@ -102,6 +103,7 @@ exports.create = function (api) {
         if (descr == null) return '' // TODO: should be in patchcore, I think...
         return api.message.html.markdown(descr)
       })),
+      h('section.educationSecret', api.about.html.educationSecret(id)),
       h('section.aliases', [
         h('header', 'Aliases'),
         h('section.avatars', [
