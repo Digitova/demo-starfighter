@@ -57,11 +57,7 @@ exports.create = function (api) {
             h('li', 'Operating Systems. Microsoft Windows, macOS, Linux.'),
             h('li', [
               h('div', [
-                h('text', 'Network and Information Security. OSCP, CISSP, Cisco CCNA,'),
-                h('text.redacted'),
-                h('text', 'CompTIA Security+, '),
-                h('text.redacted'),
-                h('text', '.')
+                h('text', 'Network and Information Security. OSCP, CISSP, Cisco CCNA, Certified Ethical Hacker (CEH), CompTIA Security+, Network Penetration, Reverse Engineering')
               ])
             ])
           ])
